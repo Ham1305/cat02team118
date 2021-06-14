@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cat02team118">
-        <activity android:name=".MainActivity">
+        <activity android:name=".History"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".Explore" />
+        <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
