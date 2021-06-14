@@ -73,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:ems="10"
+            android:hint="Phone No."
             android:inputType="phone" />
 
         <EditText
