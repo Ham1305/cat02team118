@@ -56,12 +56,11 @@
         <ScrollView
             android:id="@+id/homescroller"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/linearLayout">
+            android:layout_height="match_parent">
 
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:columnCount="2"
                 app:rowCount="6">
 
@@ -317,7 +316,8 @@
             android:id="@+id/rewardsNavViewBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:menu="@menu/bottom_nav_menu" />
+            app:menu="@menu/bottom_nav_menu"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"/>
 
 
     </RelativeLayout>
