@@ -16,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:outlineProvider="paddedBounds">
 
@@ -31,8 +32,7 @@
                     android:layout_marginTop="30dp"
                     android:paddingLeft="15dp"
                     android:paddingRight="10dp"
-                    android:src="@drawable/ic_baseline_person"
-                    />
+                    android:src="@drawable/ic_baseline_person" />
 
                 <TextView
                     android:id="@+id/username"
@@ -163,26 +163,27 @@
                 android:layout_marginRight="25dp"
                 android:background="@drawable/mybutton"
                 android:drawableTop="@drawable/ic_baseline_edit_24"
-                android:text="Edit Information"
+                android:text="Edit Profile Info"
                 android:textStyle="bold"
                 app:srcCompat="@drawable/ic_baseline_edit_24" />
         </LinearLayout>
-        <RelativeLayout
-            android:id="@+id/BottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true">
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/rewardsNavViewBar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
-                app:menu="@menu/bottom_nav_menu" />
-
-
-        </RelativeLayout>
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/BottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/rewardsNavViewBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -19,7 +19,7 @@ public class ProfilePage extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.rewardsNavViewBar);
 
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.profilepage);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

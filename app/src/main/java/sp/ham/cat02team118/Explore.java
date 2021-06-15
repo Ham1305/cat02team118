@@ -37,6 +37,11 @@ public class Explore extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
+                    case R.id.profilepage:
+                        startActivity(new Intent(getApplicationContext(), ProfilePage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
                     case R.id.nav_settings:
                         startActivity(new Intent(getApplicationContext(), Settings.class));
                         overridePendingTransition(0,0);

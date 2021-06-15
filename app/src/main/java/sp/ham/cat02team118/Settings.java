@@ -36,6 +36,11 @@ public class Settings extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
+                    case R.id.profilepage:
+                        startActivity(new Intent(getApplicationContext(), ProfilePage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(), Home.class));
                         overridePendingTransition(0,0);
