@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:ems="10"
-                    android:hint="Username/email"
+                    android:hint="E-mail"
                     android:inputType="textPersonName" />
 
                 <EditText
