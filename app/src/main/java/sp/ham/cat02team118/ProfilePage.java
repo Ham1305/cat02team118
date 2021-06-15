@@ -6,29 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Home extends AppCompatActivity {
-
-    private Animation bottomhalf;
-    //private LinearLayout LL1;
-    private ScrollView homescroller;
+public class ProfilePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-
-        bottomhalf = AnimationUtils.loadAnimation(this,R.anim.bottom_half);
-        //LL1 = findViewById(R.id.linearLayout1);
-        homescroller = findViewById(R.id.homescroller);
-        //LL1.setAnimation(bottomfast);
-        homescroller.setAnimation(bottomhalf);
+        setContentView(R.layout.activity_profile_page);
+        getSupportActionBar().hide();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.rewardsNavViewBar);
 
@@ -38,7 +25,7 @@ public class Home extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.home:
+                    case R.id.profilepage:
                         return true;
 
                     case R.id.explore:
@@ -51,8 +38,8 @@ public class Home extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.profilepage:
-                        startActivity(new Intent(getApplicationContext(), ProfilePage.class));
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), Home.class));
                         overridePendingTransition(0,0);
                         return true;
 
