@@ -9,21 +9,23 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Settings extends AppCompatActivity {
+public class ProfilePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_profile_page);
+        getSupportActionBar().hide();
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.rewardsNavViewBar);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_settings);
+        bottomNavigationView.setSelectedItemId(R.id.profilepage);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.nav_settings:
+                    case R.id.profilepage:
                         return true;
 
                     case R.id.explore:
@@ -36,13 +38,13 @@ public class Settings extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.profilepage:
-                        startActivity(new Intent(getApplicationContext(), ProfilePage.class));
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), Home.class));
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(), Home.class));
+                    case R.id.nav_settings:
+                        startActivity(new Intent(getApplicationContext(), Settings.class));
                         overridePendingTransition(0,0);
                         return true;
                 }
