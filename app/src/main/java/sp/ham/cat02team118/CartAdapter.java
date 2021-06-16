@@ -3,6 +3,8 @@ package sp.ham.cat02team118;
 import android.content.Context;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,12 +39,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         holder.ItemPrice.setText(CartDataList.getItemPrice());
         holder.ItemVaration.setText(CartDataList.getItemVaration());
         holder.NumofItem.setText(CartDataList.getNumofItem());
-        holder.ItemImage.setImageResource(CartDataList.getItemImage());
+        holder.ItemImage.setImageResource(Integer.parseInt(CartDataList.getItemImage()));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent shop = new Intent(view.getContext(), Shop.class);
+                Intent shop = new Intent(view.getContext(), shop_prod_view.class);
             }
         });
     }

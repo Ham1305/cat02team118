@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cat02team118">
-        <activity android:name=".cart"></activity>
+        <activity android:name=".shop_prod_view"></activity>
+        <activity android:name=".cart" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
         <activity
@@ -22,6 +23,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -1,18 +1,14 @@
 package sp.ham.cat02team118;
 
 public class CartData {
-    private String ItemName;
-    private String ItemPrice;
-    private String ItemVaration;
-    private String NumofItem;
-    private Integer itemImage;
+    private String ItemName, ItemPrice, ItemVaration, NumofItem, ItemImage;
 
-    public CartData(String itemName, String itemPrice, String itemVaration, String numofItem, Integer itemImage) {
+    public CartData(String itemName, String itemPrice, String itemVaration, String numofItem, String itemImage) {
         ItemName = itemName;
         ItemPrice = itemPrice;
         ItemVaration = itemVaration;
         NumofItem = numofItem;
-        this.itemImage = itemImage;
+        ItemImage = itemImage;
     }
 
     public void setItemName(String itemName) {
@@ -31,8 +27,8 @@ public class CartData {
         NumofItem = numofItem;
     }
 
-    public void setMovieImage(Integer itemImage) {
-        this.itemImage = itemImage;
+    public void setItemImage(String itemImage) {
+        ItemImage = itemImage;
     }
 
     public String getItemName() {
@@ -51,7 +47,7 @@ public class CartData {
         return NumofItem;
     }
 
-    public Integer getItemImage() {
-        return itemImage;
+    public String getItemImage() {
+        return ItemImage;
     }
 }
