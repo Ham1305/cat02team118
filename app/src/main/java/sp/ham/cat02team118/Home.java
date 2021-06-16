@@ -84,6 +84,8 @@ public class Home extends AppCompatActivity {
                     case R.id.nav_settings:
                         startActivity(new Intent(getApplicationContext(), Settings.class));
                         overridePendingTransition(0, 0);
+                        startActivity(new Intent(getApplicationContext(), NewShop.class));
+                        overridePendingTransition(0,0);
                         return true;
                 }
                 return false;

@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -18,6 +21,8 @@
         <activity android:name=".cart" />
         <activity android:name=".Register" />
         <activity android:name=".NewListing"></activity>
+        <activity android:name=".CategoryDialog"/>
+        <activity android:name=".NewListing" />
         <activity android:name=".NewShop" />
         <activity android:name=".ProfilePage" />
         <activity android:name=".Login" />
