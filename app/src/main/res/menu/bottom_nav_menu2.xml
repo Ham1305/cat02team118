@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"
@@ -11,17 +12,21 @@
         android:title="Explore"/>
 
     <item
-        android:id="@+id/activity"
-        android:icon="@drawable/ic_baseline_location_on_24"
-        android:title="Activity" />
+        android:id="@+id/placeholder"
+        android:title=""
+        android:enabled="false"
+        />
+
 
     <item
         android:id="@+id/profilepage"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="My Profile" />
 
+
+
     <item
-        android:id="@+id/business"
-        android:icon="@drawable/ic_baseline_add_business_24"
-        android:title="Business"/>
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings"/>
 </menu>
