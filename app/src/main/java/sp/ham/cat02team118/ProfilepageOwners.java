@@ -52,6 +52,7 @@ public class ProfilepageOwners extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilepage_owners);
+        getSupportActionBar().setTitle("Your shop listings");
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setBackground(null);
         bottomNavigation.setSelectedItemId(R.id.business);

@@ -49,10 +49,13 @@
 
             <TextView
                 android:id="@+id/shopCategory"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/singapore_red"
+                android:padding="3dp"
                 android:text="TextView"
-                android:textColor="@color/singapore_red" />
+                android:textColor="@color/white" />
 
         </LinearLayout>
     </LinearLayout>
