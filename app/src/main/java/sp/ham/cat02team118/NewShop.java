@@ -219,6 +219,21 @@ public class NewShop extends AppCompatActivity implements CategoryDialog.CatDial
                                             Toast.makeText(NewShop.this, "something went wrong...", Toast.LENGTH_SHORT).show();
                                         }
                                     });
+
+                                    DocumentReference userRef = firestore.collection("users").document(UserID);
+                                    Map<String,Object> bruh = new HashMap<>();
+                                    bruh.put("shop",shop);
+                                    userRef.update(bruh).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Log.d(TAG,  shop +" is now updated in users profile");
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(NewShop.this, "something went wrong...", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
                                 }
                             });
                         }
@@ -301,8 +316,6 @@ public class NewShop extends AppCompatActivity implements CategoryDialog.CatDial
                 }
             }
         }
-
-
     }
 
 
