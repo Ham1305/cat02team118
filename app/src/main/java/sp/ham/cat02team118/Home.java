@@ -67,7 +67,7 @@ public class Home extends AppCompatActivity {
                         return true;
 
                     case R.id.activity:
-                        startActivity(new Intent(getApplicationContext(), NewListing.class));
+                        startActivity(new Intent(getApplicationContext(), History.class));
                         overridePendingTransition(0,0);
                         return true;
 
