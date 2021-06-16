@@ -41,6 +41,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 
         holder.name.setText(shop.getName());
         holder.description.setText(shop.getDescription());
+        holder.address.setText(shop.getAddress());
+        holder.category.setText(shop.getCategory());
         Glide.with(holder.photo.getContext()).load(shop.getPhoto()).into(((ViewHolder) holder).photo);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +61,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView name, price, description;
+        TextView name, address, description,category;
         ImageView photo;
 
         public ViewHolder(@NonNull View itemView) {
@@ -67,6 +69,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
             name = itemView.findViewById(R.id.shopName);
             description = itemView.findViewById(R.id.shopDescription);
             photo = itemView.findViewById(R.id.shopImage);
+            address = itemView.findViewById(R.id.shopAddress);
+            category = itemView.findViewById(R.id.shopCategory);
         }
     }
 }

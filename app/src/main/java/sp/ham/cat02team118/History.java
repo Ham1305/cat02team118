@@ -17,14 +17,13 @@ public class History extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         BottomNavigationView bottomNavigationView = findViewById(R.id.rewardsNavViewBar);
 
-        bottomNavigationView.setSelectedItemId(R.id.activity);
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.activity:
-                        return true;
+
 
                     case R.id.explore:
                         startActivity(new Intent(getApplicationContext(), Explore.class));

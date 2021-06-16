@@ -69,20 +69,12 @@ public class Home extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
 
-                    case R.id.activity:
-                        startActivity(new Intent(getApplicationContext(), History.class));
-                        overridePendingTransition(0, 0);
-                        return true;
 
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext(), ProfilePage.class));
                         overridePendingTransition(0,0);
                         return true;
 
-                    /*case R.id.nav_settings:
-                        startActivity(new Intent(getApplicationContext(), Settings.class));
-                        overridePendingTransition(0, 0);
-                        startActivity(new Intent(getApplicationContext(), NewShop.class));*/
 
                     case R.id.business:
                         startActivity(new Intent(getApplicationContext(), ProfilepageOwners.class));

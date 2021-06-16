@@ -7,7 +7,12 @@
     tools:context=".ProfilepageOwners">
 
 
-<com.google.android.material.bottomappbar.BottomAppBar
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ownerrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
     android:id="@+id/bottomAppBar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

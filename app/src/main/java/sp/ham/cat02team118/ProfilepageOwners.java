@@ -1,8 +1,11 @@
 package sp.ham.cat02team118;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -21,9 +24,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
+
+import java.util.ArrayList;
 
 public class ProfilepageOwners extends AppCompatActivity {
 
@@ -34,6 +43,10 @@ public class ProfilepageOwners extends AppCompatActivity {
     private String UserID;
     String usershop;
 
+    RecyclerView recyclerView;
+    ArrayList<Product> productArrayList;
+    ProductAdapter productAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +56,10 @@ public class ProfilepageOwners extends AppCompatActivity {
         bottomNavigation.setBackground(null);
         bottomNavigation.setSelectedItemId(R.id.business);
 
+        recyclerView = findViewById(R.id.ownerrecycler);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
         storage = FirebaseStorage.getInstance();
@@ -50,6 +67,12 @@ public class ProfilepageOwners extends AppCompatActivity {
         UserID = auth.getCurrentUser().getUid();
 
         DoesUserHaveShop(UserID);
+
+        productArrayList = new ArrayList<Product>();
+        productAdapter = new ProductAdapter(ProfilepageOwners.this, productArrayList);
+
+        recyclerView.setAdapter(productAdapter);
+
 
         //LoadShop();
 
@@ -59,7 +82,7 @@ public class ProfilepageOwners extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.explore:
-                        startActivity(new Intent(getApplicationContext(), Explore.class));
+                        startActivity(new Intent(getApplicationContext(), ShopList.class));
                         overridePendingTransition(0, 0);
                         return true;
 
@@ -126,6 +149,8 @@ public class ProfilepageOwners extends AppCompatActivity {
                             @Override
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
                                 usershop = documentSnapshot.getString("shop");
+                                EventChangeListener(usershop);
+
                             }
                         });
 
@@ -152,9 +177,26 @@ public class ProfilepageOwners extends AppCompatActivity {
         });
     }
 
+    private void EventChangeListener(String shopname) {
+        firestore.collection("shops").document(shopname).collection("listings").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                if (error != null) {
+                    Log.e("Firestore error", error.getMessage());
+                    return;
+                }
+                for (DocumentChange dc : value.getDocumentChanges()) {
+                    if (dc.getType() == DocumentChange.Type.ADDED) {
+                        productArrayList.add(dc.getDocument().toObject(Product.class));
+                    }
+                    productAdapter.notifyDataSetChanged();
+                }
+            }
+        });
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
-        DoesUserHaveShop(UserID);
     }
 }

@@ -56,14 +56,10 @@ public class ProfilePage extends AppCompatActivity {
                         return true;
 
                     case R.id.explore:
-                        startActivity(new Intent(getApplicationContext(), Explore.class));
+                        startActivity(new Intent(getApplicationContext(), ShopList.class));
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.activity:
-                        startActivity(new Intent(getApplicationContext(), History.class));
-                        overridePendingTransition(0,0);
-                        return true;
 
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(), Home.class));

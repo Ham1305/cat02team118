@@ -30,7 +30,7 @@ public class ShopList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shops_list);
 
-        getSupportActionBar().setTitle("List of Shops");
+        getSupportActionBar().setTitle("Shops near you");
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);

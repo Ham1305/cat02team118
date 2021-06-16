@@ -2,15 +2,17 @@ package sp.ham.cat02team118;
 
 public class Shop {
 
-    String description,name,photo;
+    String description,name,photo,address,category;
 
     public Shop() {
     }
 
-    public Shop(String description, String name, String photo, String price) {
+    public Shop(String description, String name, String photo, String address,String category) {
         this.description = description;
         this.name = name;
         this.photo = photo;
+        this.address = address;
+        this.category = category;
     }
 
     public String getDescription() {
@@ -37,4 +39,19 @@ public class Shop {
         this.photo = photo;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }

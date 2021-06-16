@@ -10,10 +10,6 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:title="Explore"/>
 
-    <item
-        android:id="@+id/activity"
-        android:icon="@drawable/ic_baseline_location_on_24"
-        android:title="Activity" />
 
     <item
         android:id="@+id/profilepage"

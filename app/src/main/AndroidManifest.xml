@@ -23,8 +23,6 @@
 
         <activity android:name=".ProfilepageOwners"></activity>
 
-        <activity android:name=".CategoryDialog"/>
-
         <activity android:name=".NewListing" />
         <activity android:name=".CategoryDialog" />
         <activity android:name=".NewShop" />
