@@ -4,17 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".shop_prod_view">
+    tools:context=".individual_item_view">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/ShopName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -79,7 +74,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. of item:" />
+
+                <EditText
+                    android:id="@+id/NumofItem"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </TableRow>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to cart" />
         </TableLayout>
-    </FrameLayout>
+
+        </FrameLayout>
 
 </LinearLayout>

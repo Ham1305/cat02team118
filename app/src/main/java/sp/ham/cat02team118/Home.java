@@ -11,11 +11,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -67,7 +65,7 @@ public class Home extends AppCompatActivity {
                         return true;
 
                     case R.id.explore:
-                        startActivity(new Intent(getApplicationContext(), Explore.class));
+                        startActivity(new Intent(getApplicationContext(), ShopList.class));
                         overridePendingTransition(0, 0);
                         return true;
 
@@ -104,7 +102,7 @@ public class Home extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.cart:
-                startActivity(new Intent(getApplicationContext(), cart.class));
+                //startActivity(new Intent(getApplicationContext(), cart.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
