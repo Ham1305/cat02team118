@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cat02team118">
-        <activity android:name=".NewListing"></activity>
+        <activity android:name=".ProfilepageOwners"></activity>
+        <activity android:name=".NewListing" />
         <activity android:name=".NewShop" />
         <activity android:name=".ProfilePage" />
         <activity android:name=".Register" />

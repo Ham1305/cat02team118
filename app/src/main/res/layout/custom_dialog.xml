@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="@color/black"
+    >
+
+    <TextView
+        android:id="@+id/text_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Add A Product!"
+        android:padding="10dp"
+        android:textColor="#FF4141"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cam"
+            android:layout_width="100dp"
+            android:layout_height="85dp"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:text="Camera"
+            android:padding="10dp"
+            android:drawableTop="@drawable/ic_baseline_photo_camera_24"
+            android:textColor="#FF4141"
+            android:paddingRight="10dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_gallery"
+            android:layout_width="100dp"
+            android:layout_height="85dp"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:drawableTop="@drawable/ic_baseline_add_photo_alternate_24"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:text="Gallery"
+            android:textColor="#FF4141"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
