@@ -67,7 +67,7 @@ public class Home extends AppCompatActivity {
                         return true;
 
                     case R.id.activity:
-                        startActivity(new Intent(getApplicationContext(), History.class));
+                        startActivity(new Intent(getApplicationContext(), NewListing.class));
                         overridePendingTransition(0,0);
                         return true;
 
@@ -76,8 +76,9 @@ public class Home extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.nav_settings:
-                        startActivity(new Intent(getApplicationContext(), Settings.class));
+
+                    case R.id.business:
+                        startActivity(new Intent(getApplicationContext(), ProfilepageOwners.class));
                         overridePendingTransition(0,0);
                         return true;
                 }
