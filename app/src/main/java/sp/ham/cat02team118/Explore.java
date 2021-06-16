@@ -42,8 +42,8 @@ public class Explore extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.nav_settings:
-                        startActivity(new Intent(getApplicationContext(), NewShop.class));
+                    case R.id.business:
+                        startActivity(new Intent(getApplicationContext(), ProfilepageOwners.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

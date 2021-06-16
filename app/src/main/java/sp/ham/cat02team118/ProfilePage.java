@@ -103,6 +103,10 @@ public class ProfilePage extends AppCompatActivity {
                     case R.id.nav_settings:
                         startActivity(new Intent(getApplicationContext(), NewShop.class));
                         overridePendingTransition(0, 0);
+
+                    case R.id.business:
+                        startActivity(new Intent(getApplicationContext(), ProfilepageOwners.class));
+                        overridePendingTransition(0,0);
                         return true;
                 }
                 return false;
@@ -155,4 +159,3 @@ public class ProfilePage extends AppCompatActivity {
 
     }
 }
-
