@@ -17,14 +17,14 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         BottomNavigationView bottomNavigationView = findViewById(R.id.rewardsNavViewBar);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_settings);
+        //bottomNavigationView.setSelectedItemId(R.id.nav_settings);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.nav_settings:
-                        return true;
+                    /*case R.id.nav_settings:
+                        return true;*/
 
                     case R.id.explore:
                         startActivity(new Intent(getApplicationContext(), Explore.class));
