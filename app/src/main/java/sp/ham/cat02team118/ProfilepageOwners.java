@@ -74,7 +74,6 @@ public class ProfilepageOwners extends AppCompatActivity {
 
         recyclerView.setAdapter(productAdapter);
 
-
         //LoadShop();
 
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

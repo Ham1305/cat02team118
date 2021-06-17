@@ -20,6 +20,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
     Context context;
     ArrayList<Shop> shopArrayList;
 
+
     public ShopAdapter(Context context, ArrayList<Shop> shopArrayList) {
         this.context = context;
         this.shopArrayList = shopArrayList;
@@ -50,9 +51,13 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
                 Intent intent = new Intent(context, ProductList.class);
                 intent.putExtra("name", shop.getName());
                 context.startActivity(intent);
+
+
             }
         });
     }
+
+
 
     @Override
     public int getItemCount() {

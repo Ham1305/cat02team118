@@ -28,7 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class individual_item_view extends AppCompatActivity {
 
     public static final String TAG = "TAG";
-    private String prodname, prodprice, proddescription, prodimage;
+    private String prodname, prodprice, proddescription, prodimage,shopname;
     private ImageView productImage;
     private Button btn;
     private TextView productname, productprice, productdescription;

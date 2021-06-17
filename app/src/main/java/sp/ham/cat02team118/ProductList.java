@@ -1,13 +1,17 @@
 package sp.ham.cat02team118;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -41,6 +45,39 @@ public class ProductList extends AppCompatActivity {
         recyclerView.setAdapter(productAdapter);
 
         EventChangeListener();
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.rewardsNavViewBar);
+
+        bottomNavigationView.setSelectedItemId(R.id.explore);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), Home.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.explore:
+                        return true;
+
+
+                    case R.id.profilepage:
+                        startActivity(new Intent(getApplicationContext(), ProfilePage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+
+                    case R.id.business:
+                        startActivity(new Intent(getApplicationContext(), ProfilepageOwners.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     private void EventChangeListener() {
